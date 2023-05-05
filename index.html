@@ -10,6 +10,22 @@
 
         gtag('config', 'AW-587343402');
         </script>
+        <!-- Event snippet for Botão WhatsApp conversion page
+        In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+        <script>
+            function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof(url) != 'undefined') {
+                window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-587343402/VZq5COD6wJwYEKrMiJgC',
+                'event_callback': callback
+            });
+            return false;
+        }
+        </script>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
@@ -528,7 +544,7 @@
         </div>
         <div class="whats">
             <a href="https://wa.me/5541991526558?text=Ol%C3%A1%21%0D%0AGostaria+de+agendar+um+bate+papo+para+saber+mais+sobre+a+Data+Office+Consultoria." target="_blank">
-                <img src="assets/img/whatsapp-png.png" width="50" alt="Fale Conosco pelo WhatsApp" title="Fale Conosco pelo WhatsApp" />
+                <img src="assets/img/whatsapp-png.png" width="50" alt="Fale Conosco pelo WhatsApp" title="Fale Conosco pelo WhatsApp" onclick="return gtag_report_conversion('https://wa.me/5541991526558?text=Ol%C3%A1%21%0D%0AGostaria+de+agendar+um+bate+papo+para+saber+mais+sobre+a+Data+Office+Consultoria.')" />
             </a>
         </div>
         <!-- Bootstrap core JS-->
